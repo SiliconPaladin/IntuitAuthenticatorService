@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50B18107-6937-4438-A448-A526F3D36A30}</ProjectGuid>
+    <ProjectGuid>{CEE15E88-93A1-48A3-A454-F5AA681436B9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IntuitAuthenticatorService</RootNamespace>
-    <AssemblyName>IntuitAuthenticatorService</AssemblyName>
+    <RootNamespace>IntuitAuthenticatorService.TestClient</RootNamespace>
+    <AssemblyName>IntuitAuthenticatorService.TestClient</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -46,18 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthenticatorService.cs" />
-    <Compile Include="Configuration.cs" />
-    <Compile Include="HelperExtensions.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="PasswordResetRequest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StubbedFunctionality.cs" />
-    <Compile Include="PrivateUserAccount.cs" />
-    <Compile Include="UserAccountRepository.cs" />
-    <Compile Include="UserNotFoundException.cs" />
-    <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

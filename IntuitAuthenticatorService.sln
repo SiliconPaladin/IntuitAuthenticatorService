@@ -3,20 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitAuthenticatorService", "IntuitAuthenticatorService\IntuitAuthenticatorService.csproj", "{67A73C5E-F55B-49F5-B54B-9CA809CBABD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitAuthenticatorService", "IntuitAuthenticatorService\IntuitAuthenticatorService.csproj", "{50B18107-6937-4438-A448-A526F3D36A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitAuthenticatorService.UnitTests", "IntuitAuthenticatorService.UnitTests\IntuitAuthenticatorService.UnitTests.csproj", "{155E1D5B-ACC5-4668-B2C5-D1B0231B292A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "IntuitAuthenticatorService.Interface", "IntuitAuthenticatorServiceInterface\IntuitAuthenticatorService.Interface.shproj", "{4C47D49F-3478-494D-9EFD-F046F9599BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitAuthenticatorService.TestClient", "IntuitAuthenticatorService.TestClient\IntuitAuthenticatorService.TestClient.csproj", "{CEE15E88-93A1-48A3-A454-F5AA681436B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example HTTP Requests", "Example HTTP Requests", "{F9345F0B-DE73-4610-8A3C-4B53C2E7EB84}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		IntuitAuthenticatorServiceInterface\IntuitAuthenticatorServiceInterface.projitems*{4c47d49f-3478-494d-9efd-f046f9599bb7}*SharedItemsImports = 13
+		IntuitAuthenticatorServiceInterface\IntuitAuthenticatorServiceInterface.projitems*{50b18107-6937-4438-a448-a526f3d36a30}*SharedItemsImports = 4
+		IntuitAuthenticatorServiceInterface\IntuitAuthenticatorServiceInterface.projitems*{cee15e88-93a1-48a3-a454-f5aa681436b9}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67A73C5E-F55B-49F5-B54B-9CA809CBABD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67A73C5E-F55B-49F5-B54B-9CA809CBABD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67A73C5E-F55B-49F5-B54B-9CA809CBABD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67A73C5E-F55B-49F5-B54B-9CA809CBABD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B18107-6937-4438-A448-A526F3D36A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B18107-6937-4438-A448-A526F3D36A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B18107-6937-4438-A448-A526F3D36A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B18107-6937-4438-A448-A526F3D36A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155E1D5B-ACC5-4668-B2C5-D1B0231B292A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155E1D5B-ACC5-4668-B2C5-D1B0231B292A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155E1D5B-ACC5-4668-B2C5-D1B0231B292A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155E1D5B-ACC5-4668-B2C5-D1B0231B292A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE15E88-93A1-48A3-A454-F5AA681436B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE15E88-93A1-48A3-A454-F5AA681436B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE15E88-93A1-48A3-A454-F5AA681436B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE15E88-93A1-48A3-A454-F5AA681436B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A7D6CB4-F77A-4CB3-A5B7-B31337C3091F}
 	EndGlobalSection
 EndGlobal
