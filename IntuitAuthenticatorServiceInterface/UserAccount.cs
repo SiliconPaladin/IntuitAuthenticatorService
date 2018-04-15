@@ -19,17 +19,6 @@ namespace IntuitAuthenticatorService
         [DataMember]
         public string EmailAddress { get; private set; }
 
-        [OnDeserialized]
-        void OnDeserialized(StreamingContext ctx)
-        {
-            if(String.IsNullOrWhiteSpace(FirstName) || 
-               String.IsNullOrWhiteSpace(LastName) ||
-               String.IsNullOrWhiteSpace(EmailAddress))
-            {
-                throw new InvalidOperationException("Required property is missing");
-            }
-        }
-
         public UserAccount()
         {
         }

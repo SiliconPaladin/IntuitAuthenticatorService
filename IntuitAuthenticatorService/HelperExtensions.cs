@@ -10,11 +10,18 @@ namespace IntuitAuthenticatorService
     static class HelperExtensions
     {
         private static SHA1 _sha1Provider = new SHA1Cng();
+        private static readonly byte[] _salt = new byte[20] { 0x45, 0x2a, 0x95, 0x9c, 0x21, 0xa0, 0xe5, 0x89, 0xc3, 0x17, 0x8e, 0x66, 0x1c, 0xa5, 0x2b, 0x91, 0x2a, 0x77, 0x75, 0x83 }; 
     
         internal static byte[] GetPasswordHash(this string password)
         {
             var encodedPassword = UTF8Encoding.UTF8.GetBytes(password);
-            return _sha1Provider.ComputeHash(encodedPassword);
+            var hashedPassword = _sha1Provider.ComputeHash(encodedPassword);
+            var saltedPassword = new byte[hashedPassword.Length];
+            for(int i = 0; i < saltedPassword.Length; i++)
+            {
+                saltedPassword[i] = (byte) (hashedPassword[i] ^ _salt[i]);
+            }
+            return saltedPassword;
         }
 
         internal static bool IsEqualTo(this IEnumerable<byte> left, IEnumerable<byte> right)

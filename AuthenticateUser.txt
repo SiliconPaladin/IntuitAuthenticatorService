@@ -1,0 +1,1 @@
+http://localhost:8080/authenticator/AuthenticateUser?emailAddress=leia%40force.net&password=URmy0nlyHope%21

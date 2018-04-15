@@ -19,11 +19,6 @@ namespace IntuitAuthenticatorService
             using(var host = new WebServiceHost(typeof(AuthenticatorService), serviceAddress))
             {
                 ServiceEndpoint ep = host.AddServiceEndpoint(typeof(IAuthenticatorService), new WebHttpBinding(), "");
-                //var smb = new ServiceMetadataBehavior();
-                //smb.HttpGetEnabled = true;
-                //smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
-                //host.Description.Behaviors.Add(smb);
-
                 host.Open();
 
                 Log.WriteLine($"The service is ready at {serviceAddress}", outputToConsole: true);

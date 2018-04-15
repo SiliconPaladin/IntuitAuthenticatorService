@@ -50,10 +50,12 @@ namespace IntuitAuthenticatorService
         {
             if(!DoesUserExist(emailAddress))
             {
+                Log.WriteLine($"Getting User {emailAddress} FAILED => User not found");
                 return null;
             }
             else
             {
+                Log.WriteLine($"Getting User {emailAddress} SUCCESS!");
                 var privateUser = _repository[emailAddress];
                 return new UserAccount(privateUser.FirstName, privateUser.LastName, privateUser.EmailAddress);
             }
@@ -75,10 +77,20 @@ namespace IntuitAuthenticatorService
         {
             if(!DoesUserExist(emailAddress))
             {
+                Log.WriteLine($"Resetting Password for user {emailAddress} FAILED => User not found");
                 return AuthenticationStatus.Failed;
             }
 
-            return _repository[emailAddress].ResetPassword(requestId, password);
+            var status = _repository[emailAddress].ResetPassword(requestId, password);
+            if(status == AuthenticationStatus.Success)
+            {
+                Log.WriteLine($"Resetting Password for user {emailAddress} SUCCESS!");
+            }
+            else
+            {
+                Log.WriteLine($"Resetting Password for user {emailAddress} FAILED => Status = {status}");
+            }
+            return status;
         }
     }
 }

@@ -21,7 +21,5 @@ namespace IntuitAuthenticatorService.UnitTests
         {
             Assert.IsFalse(Validation.IsValidEmailAddress(null));
         }
-
-        // TODO: Password Validation Tests
     }
 }

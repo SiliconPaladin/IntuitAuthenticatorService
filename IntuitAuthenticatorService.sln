@@ -11,7 +11,18 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "IntuitAuthenticatorService.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitAuthenticatorService.TestClient", "IntuitAuthenticatorService.TestClient\IntuitAuthenticatorService.TestClient.csproj", "{CEE15E88-93A1-48A3-A454-F5AA681436B9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example HTTP Requests", "Example HTTP Requests", "{F9345F0B-DE73-4610-8A3C-4B53C2E7EB84}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example GET HTTP Requests for Browser URL", "Example GET HTTP Requests for Browser URL", "{F9345F0B-DE73-4610-8A3C-4B53C2E7EB84}"
+	ProjectSection(SolutionItems) = preProject
+		AuthenticateUser.txt = AuthenticateUser.txt
+		GetUserAccountInformation.txt = GetUserAccountInformation.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{A25E5010-7A1C-4474-B837-0289B5E094AB}"
+	ProjectSection(SolutionItems) = preProject
+		Design Notes.txt = Design Notes.txt
+		README.txt = README.txt
+		References Used.txt = References Used.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

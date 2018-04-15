@@ -1,0 +1,8 @@
+MSDN .NET API References - docs.microsoft.com
+	- https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service
+	- https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.web.webinvokeattribute?view=netframework-4.7.2
+	- https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.web.webgetattribute?view=netframework-4.7.2
+	- https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+
+Stack Overflow
+	- https://stackoverflow.com/questions/6136307/advantages-of-webinvoke-post-compared-to-webget

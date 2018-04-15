@@ -47,7 +47,7 @@ namespace IntuitAuthenticatorService
         /// The user's account information if found; otherwise, <c>null</c> is returned.
         /// </returns>
         [OperationContract]
-        [WebGet/*(UriTemplate = "getuser?email={emailAddress}")*/]
+        [WebGet]
         UserAccount GetUserAccountInformation(string emailAddress);
 
         /// <summary>

@@ -1,0 +1,41 @@
+Design Notes:
+[x = feature not implemented]
+
+1.  Log In (Authenticate) function:
+	- Required Input: Username (email address), password
+	- Additional Features:
+		- Passwords Hashed & Salted
+		x Too Many Failed Attempts == Account Locked
+2.  Create User function:
+	- Required Input: Email address, user's actual name, password
+	- Additional Features:
+		- Password hashed & salted
+		x Security Question / Answer (answer hashed)
+3.	Get User function:
+	- Required Input: Username (email address)
+	- Output: Non-sensitive user account information
+
+Other Features:
+---------------
+4.	Change Password Functionality:
+	A.	Password Reset Request function:
+		- Required Input: username (email address)
+		x Optional Input: Security Question / Answer
+		- Output: Email unique request ID to user's email address (stubbed out)
+	B.	Reset Password function:
+		- Required Input: username (email address), reset request ID, new password
+		- Validates reset ID and changes password
+5.	Input Validation
+	A.	Validate Email Address Format (simple implementation)
+	B.  Password Complexity Check
+		- Minimum Length
+		x Contains at least 1 of each: lowercase letter, uppercase letter, numbers, special characters
+6.	Logging!
+7.	Support for 2 Factor Authentication (Stubbed Out) [NOT IMPLEMENTED]
+8.	Authorization: Users are normal users or admin users [NOT IMPLEMENTED]
+	- Add GetAuthorization or IsAuthorized function(s)?
+
+TESTING
+-------
+1. Unit tests to validate individual function behavior
+2. Command-line utility to perform end-to-end test of service behavior
