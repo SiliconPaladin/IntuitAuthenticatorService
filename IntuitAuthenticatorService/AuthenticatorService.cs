@@ -10,6 +10,7 @@ namespace IntuitAuthenticatorService
     {
         public AuthenticationStatus AuthenticateUser(string emailAddress, string password)
         {
+            emailAddress = emailAddress?.ToLowerInvariant();
             Log.WriteLine($"Authenticating User {emailAddress}...");
 
             if(password == null)
@@ -49,6 +50,7 @@ namespace IntuitAuthenticatorService
 
         public AuthenticationStatus CreateUser(string emailAddress, string firstName, string lastName, string password)
         {
+            emailAddress = emailAddress?.ToLowerInvariant();
             Log.WriteLine($"Creating new user '{emailAddress}'...");
             if(String.IsNullOrWhiteSpace(firstName))
             {
@@ -81,10 +83,11 @@ namespace IntuitAuthenticatorService
             return UserAccountRepository.AddUserAccount(user);
         }
 
-        public UserAccount GetUserAccountInformation(string emailAddress) => UserAccountRepository.GetPublicUser(emailAddress);
+        public UserAccount GetUserAccountInformation(string emailAddress) => UserAccountRepository.GetPublicUser(emailAddress?.ToLowerInvariant());
 
         public AuthenticationStatus RequestPasswordReset(string emailAddress)
         {
+            emailAddress = emailAddress?.ToLowerInvariant();
             try
             {
                 Log.WriteLine($"Requesting password reset for {emailAddress}...");
@@ -100,6 +103,6 @@ namespace IntuitAuthenticatorService
             }
         }
 
-        public AuthenticationStatus ResetPassword(string emailAddress, int requestId, string password) => UserAccountRepository.ResetPassword(emailAddress, requestId, password);
+        public AuthenticationStatus ResetPassword(string emailAddress, int requestId, string password) => UserAccountRepository.ResetPassword(emailAddress?.ToLowerInvariant(), requestId, password);
     }
 }
